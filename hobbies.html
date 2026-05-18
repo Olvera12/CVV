@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mis Intereses</title>
+    <link rel="stylesheet" href="estilos.css">
+    <style>
+        .galeria-hobbies {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 15px;
+            margin: 15px 0;
+        }
+        .galeria-hobbies img {
+            width: 200px;
+            height: 150px;
+            object-fit: cover;
+            border-radius: 5px;
+            border: 1px solid #ddd;
+            cursor: pointer;
+            transition: transform 0.3s;
+        }
+        .galeria-hobbies img:hover {
+            transform: scale(1.05);
+        }
+        .imagen-ampliada {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.9);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            cursor: pointer;
+        }
+        .imagen-ampliada img {
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain;
+        }
+    </style>
+</head>
+<body>
+    <div class="contenedor">
+        <div class="seccion-completa">
+            <h2>Intereses y Hobbies</h2>
+            
+            <h3>Deportes/Fitness:</h3>
+            <p>Tengo 14 años entrenando y practicando taekwondo, mi cinta actual es cinta negra 3er Dan y también juego fútbol</p>
+            <div class="galeria-hobbies">
+                <img src="taekwondo.jpg" alt="Practicando taekwondo" onclick="ampliarImagen(this)">
+                <img src="futbol.jpg" alt="Jugando fútbol" onclick="ampliarImagen(this)">
+            </div>
+            
+            <h3>Tecnología:</h3>
+            <p>Desde niño me ha interesado mucho la tecnología entonces después de los 14 años gracias a mi gusto por el tema empecé a hacer mis propios teclados custom y hasta el día de hoy es una de mis actividades favoritas</p>
+            <div class="galeria-hobbies">
+                <img src="teclados.jpeg" alt="Teclados custom" onclick="ampliarImagen(this)">
+            </div>
+            
+            <h3>Arte/Cultura:</h3>
+            <p>En el ámbito artístico no estoy muy interesado pero mis cantantes favoritos son Kidd Keo, Ober y Baby J</p>
+            <div class="galeria-hobbies">
+                <img src="musica.jpeg" alt="Concierto o artistas favoritos" onclick="ampliarImagen(this)">
+            </div>
+            
+            <h3>Otros intereses:</h3>
+            <p>Disfruto mucho aprendiendo nuevos idiomas y es algo que se me facilita</p>
+            <div class="galeria-hobbies">
+                <img src="idiomas.jpeg" alt="Aprendiendo idiomas" onclick="ampliarImagen(this)">
+            </div>
+            
+            <a href="index.html" class="boton-regresar">Regresar al CV</a>
+        </div>
+    </div>
+
+    <script>
+        function ampliarImagen(imagen) {
+            // Crear contenedor para imagen ampliada
+            const contenedor = document.createElement('div');
+            contenedor.className = 'imagen-ampliada';
+            
+            // Crear imagen ampliada
+            const imgAmpliada = document.createElement('img');
+            imgAmpliada.src = imagen.src;
+            imgAmpliada.alt = imagen.alt;
+            
+            // Agregar imagen al contenedor
+            contenedor.appendChild(imgAmpliada);
+            
+            // Cerrar al hacer clic
+            contenedor.onclick = function() {
+                document.body.removeChild(contenedor);
+            };
+            
+            // Agregar al documento
+            document.body.appendChild(contenedor);
+        }
+    </script>
+</body>
+</html>
