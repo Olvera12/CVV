@@ -7,37 +7,203 @@
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body>
-    <div class="contenedor">
+    <div class="contenedor fade-in">
         <h1>Curriculum Vitae</h1>
         
         <div class="encabezado">
             <div class="foto-perfil">
-                <img src="foto.jpg" alt="Foto de Alejandro Olvera">
+                <img src="foto.jpg" alt="Foto de Alejandro" class="img-expandible">
             </div>
             <div class="info-personal">
                 <p><strong>Nombre:</strong> Alejandro Olvera Hernandez</p>
                 <p><strong>Carrera:</strong> Ingeniería en Tecnología de Software</p>
-                <p><strong>Contacto:</strong> olveraalexjr@gmail.com</p>
+                <p><strong>Contacto:</strong> olveraalexjr@gmail.com |</p>
+                <p><strong>Enlaces:</strong> <a href="https://www.linkedin.com/in/alex-olvera-ba346a3a6?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank">LinkedIn</a> | <a href="https://github.com/olvera12" target="_blank">GitHub</a></p>
             </div>
+        </div>
+
+        <div class="resumen-profesional">
+            <p>Estudiante de Ingeniería en Tecnología de Software (2023 - 2028) con pasión por el modding en Java/Kotlin y el hardware. Busco una oportunidad para aplicar mis conocimientos técnicos como desarrollador Junior,analista de ciberseguridad o Practicante.</p>
         </div>
 
         <hr>
 
         <div class="botones">
-            <a href="academico.html" class="boton">Desempeño Académico</a>
-            <a href="proyectos.html" class="boton">Proyectos</a>
-            <a href="laboral.html" class="boton">Desempeño Laboral</a>
-            <a href="hobbies.html" class="boton">Intereses/Hobbies</a>
+            <a href="#habilidades" class="boton">Habilidades e Idiomas</a>
+            <a href="#proyectos" class="boton">Proyectos</a>
+            <a href="#academico" class="boton">Educación</a>
+            <a href="#laboral" class="boton">Experiencia</a>
+            <a href="#hobbies" class="boton">Intereses</a>
         </div>
 
-    
+        <div id="habilidades" class="seccion-completa seccion-oculta">
+            <h2>Habilidades e Idiomas</h2>
+            <div class="skills-grid">
+                <div class="skill-box">
+                    <h3>Tecnologías</h3>
+                    <ul>
+                        <li>Java & Kotlin (Intermedio)</li>
+                        <li>Python (básico)</li>
+                        <li>HTML, CSS, JavaScript (Intermedio)</li>
+                        
+                    </ul>
+                </div>
+                <div class="skill-box">
+                    <h3>Idiomas</h3>
+                    <ul>
+                        <li><strong>Español:</strong> Nativo</li>
+                        <li><strong>Inglés:</strong>  B2 certificado por EXCI - 90/100 <br> <a href="CERTIFICADO EXCI AOH.pdf" target="_blank" style="font-size: 0.9em; color: #4a6fa5;"><strong>[Ver Certificado]</strong></a></li>
+                        <li><strong>Japonés:</strong> Intermedio (Certificado EF International Language School)</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div id="proyectos" class="seccion-completa seccion-oculta">
+            <h2>Mis Proyectos</h2>
+            
+            <div class="proyecto-item">
+                <h3>Mod de Minecraft: Jujutsu Kaisen (2026)</h3>
+                <p>Actualmente programo un mod de Jujutsu Kaisen para Minecraft 1.21.1 desarrollado en <strong>Java y Kotlin</strong> utilizando el framework de <strong>Fabric/Forge</strong>.</p>
+                <a href="https://www.curseforge.com/minecraft/mc-mods/olvera-no-maho" target="_blank" class="link-proyecto">Ver en CurseForge</a>
+            </div>
+
+            <div class="proyecto-item">
+                <h3>Inventario HTOWNKICKS (2025)</h3>
+                <p>Programé un sistema de inventario con un tracker en tiempo real del precio del dólar para un negocio de compra/venta de tenis (USA). Incluye filtros dinámicos y registro de ventas calculando automáticamente las ganancias por conversión de divisas.</p>
+            </div>
+            
+            <div class="proyecto-item">
+                <h3>Mod de Asteroids (2025)</h3>
+                <p>Cree un mod sencillo para Asteroids utilizando netbrains con <strong>Java</strong>.</p>
+            </div>
+             <div class="proyecto-item">
+                <h3>Curriculum Vitae Web (2024)</h3>
+                <p>Desarrollo de este currículum web utilizando <strong>HTML y CSS</strong>.</p>
+            </div>
+        </div>
+
+        <div id="academico" class="seccion-completa seccion-oculta">
+            <h2>Educación</h2>
+
+            <div class="edu-item">
+                <h3>Diplomado de Analista de Ciberseguridad</h3>
+                <p><strong>Facultad De Ingeniería Mecánica y Eléctrica (UANL)</strong> | <em>Marzo 2026 - Mayo 2026</em></p>
+                <p>Formación especializada en seguridad informática, análisis de vulnerabilidades y protección de infraestructuras tecnológicas. (actualmente estoy esperando el certificado)</p>
+            </div>
+            
+            <div class="edu-item">
+                <h3>Facultad De Ingeniería Mecánica y Eléctrica (UANL)</h3>
+                <p><strong>Ingeniería en Tecnología de Software</strong> | <em>Agosto 2023 - Junio 2028 (Esperado)</em></p>
+                <div class="galeria-academica">
+                    <img src="fime.jpg" alt="FIME" class="img-expandible">
+                </div>
+            </div>
+
+            <div class="edu-item">
+                <h3>EF International Language School (Tokyo, Japón)</h3>
+                <p><strong>Estudios de Idioma Japonés e Inmersión Cultural</strong> | <em>Dic 2024 - Ene 2025</em></p>
+                <p>Graduado en nivel intermedio-avanzado con promedio final de 90.</p>
+                <div class="galeria-academica">
+                    <img src="japon.jpg" alt="Tokyo" class="img-expandible">
+                </div>
+            </div>
+        </div>
+
+        <div id="laboral" class="seccion-completa seccion-oculta">
+            <h2>Experiencia Laboral</h2>
+            
+            <div class="job-item">
+                <h3>Piloto de Dron en Obras Públicas - Municipio de Guadalupe</h3>
+                <p><em>2023 - 2024</em></p>
+                <p>Recabación de evidencias fotográficas y de video para la documentación archivística y seguimiento de avances de obra. Demostró alta responsabilidad en el manejo de hardware costoso, control de datos y cumplimiento de tiempos de entrega.</p>
+                <div class="video-container">
+                    <iframe width="560" height="315" src="https://www.youtube.com/embed/HP_7OBI2qJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+
+        <div id="hobbies" class="seccion-completa seccion-oculta">
+            <h2>Intereses y Hobbies</h2>
+            
+            <div class="hobby-item">
+                <h3>Deportes y Disciplina</h3>
+                <p>Tengo 14 años entrenando <strong>Taekwondo (Cinta Negra 3er Dan)</strong>. Esta disciplina me ha forjado constancia, resiliencia y enfoque a largo plazo. También practico fútbol lo que impacta en mis habilidades de trabajo en equipo y comunicación.</p>
+                <div class="galeria-academica">
+                    <img src="taekwondo.jpg" alt="Taekwondo" class="img-expandible">
+                    <img src="futbol.jpg" alt="Futbol" class="img-expandible">
+                </div>
+            </div>
+
+            <div class="hobby-item">
+                <h3>Tecnología y Hardware</h3>
+                <p>Soy un entusiasta del hardware; en mi tiempo libre disfruto investigando y diseñando teclados custom. </p>
+                <div class="galeria-academica">
+                    <img src="teclados.jpeg" alt="Teclados Custom" class="img-expandible"><img src="1.jpeg" alt="Teclados Custom" class="img-expandible">
+                </div>
+            </div>
+            
+            <div class="hobby-item">
+                <h3>Idiomas</h3>
+                <p>Disfruto mucho aprendiendo nuevos idiomas y culturas, habilidad que fortalecí durante mi estancia en Japón.</p>
+                <div class="galeria-academica">
+                    <img src="idiomas.jpeg" alt="Idiomas" class="img-expandible">
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Modal para imágenes expandibles -->
+    <div id="modal-imagen" class="modal">
+        <span class="cerrar-modal">&times;</span>
+        <img class="modal-contenido" id="img-ampliada">
     </div>
 
     <script>
-        //alerta de bienvenida cuando se carga la página
+        // Alerta de bienvenida (Solo 1 vez por sesión)
         window.onload = function() {
-            alert("¡Bienvenido a mi Curriculum Vitae!\n\nAquí encontrarás información sobre mi formación académica, experiencia laboral, proyectos personales y mis intereses.");
+            if (!sessionStorage.getItem('bienvenido_visto')) {
+                alert("¡Bienvenido a mi Curriculum Vitae!\n\nAquí encontrarás información sobre mi formación académica, experiencia laboral, proyectos personales y mis intereses.");
+                sessionStorage.setItem('bienvenido_visto', 'true');
+            }
         };
+
+        // Dinamismo: Intersection Observer para animar las secciones al hacer scroll
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                }
+            });
+        }, { threshold: 0.1 });
+
+        document.querySelectorAll('.seccion-oculta').forEach((el) => {
+            observer.observe(el);
+        });
+
+        // Lógica para expandir imágenes (Modal)
+        const modal = document.getElementById("modal-imagen");
+        const imgModal = document.getElementById("img-ampliada");
+        const imagenes = document.querySelectorAll(".img-expandible");
+        const spanCerrar = document.getElementsByClassName("cerrar-modal")[0];
+
+        imagenes.forEach(img => {
+            img.onclick = function(){
+                modal.style.display = "flex";
+                imgModal.src = this.src;
+            }
+        });
+
+        spanCerrar.onclick = function() {
+            modal.style.display = "none";
+        }
+
+        modal.onclick = function(e) {
+            if (e.target !== imgModal) {
+                modal.style.display = "none";
+            }
+        }
     </script>
 </body>
 </html>
