@@ -1,12 +1,22 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Alejandro Olvera</title>
     <link rel="stylesheet" href="estilos.css">
 </head>
-<body>
+<body class="lang-en">
+    <!-- Language Toggle -->
+    <div class="lang-toggle-container fade-in">
+        <span class="lang-toggle-text en" onclick="document.getElementById('lang-checkbox').click()">EN</span>
+        <label class="lang-switch">
+            <input type="checkbox" id="lang-checkbox">
+            <span class="slider"></span>
+        </label>
+        <span class="lang-toggle-text es" onclick="document.getElementById('lang-checkbox').click()">ES</span>
+    </div>
+
     <div class="contenedor fade-in">
         <h1>Curriculum Vitae</h1>
         
@@ -15,95 +25,101 @@
                 <img src="foto.jpg" alt="Foto de Alejandro" class="img-expandible">
             </div>
             <div class="info-personal">
-                <p><strong>Nombre:</strong> Alejandro Olvera Hernandez</p>
-                <p><strong>Carrera:</strong> Ingeniería en Tecnología de Software</p>
-                <p><strong>Contacto:</strong> olveraalexjr@gmail.com |</p>
-                <p><strong>Enlaces:</strong> <a href="https://www.linkedin.com/in/alex-olvera-ba346a3a6?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank">LinkedIn</a> | <a href="https://github.com/olvera12" target="_blank">GitHub</a></p>
+                <p><strong><span class="es">Nombre:</span><span class="en">Name:</span></strong> Alejandro Olvera Hernandez</p>
+                <p><strong><span class="es">Carrera:</span><span class="en">Degree:</span></strong> <span class="es">Ingeniería en Tecnología de Software</span><span class="en">Software Engineering</span></p>
+                <p><strong><span class="es">Contacto:</span><span class="en">Contact:</span></strong> olveraalexjr@gmail.com |</p>
+                <p><strong><span class="es">Enlaces:</span><span class="en">Links:</span></strong> <a href="https://www.linkedin.com/in/alex-olvera-ba346a3a6?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank">LinkedIn</a> | <a href="https://github.com/olvera12" target="_blank">GitHub</a></p>
             </div>
         </div>
 
         <div class="resumen-profesional">
-            <p>Estudiante de Ingeniería en Tecnología de Software (2023 - 2028) con pasión por el modding en Java/Kotlin y el hardware. Busco una oportunidad para aplicar mis conocimientos técnicos como desarrollador Junior, analista de ciberseguridad o Practicante.</p>
+            <p class="es">Estudiante de Ingeniería en Tecnología de Software (2023 - 2028) con pasión por el modding en Java/Kotlin y el hardware. Busco una oportunidad para aplicar mis conocimientos técnicos como desarrollador Junior, analista de ciberseguridad o Practicante.</p>
+            <p class="en">Software Engineering student (2023 - 2028) with a passion for Java/Kotlin modding and hardware. Seeking an opportunity to apply my technical knowledge as a Junior Developer, Cybersecurity Analyst, or Intern.</p>
         </div>
 
         <hr>
 
         <div class="botones">
-            <a href="#habilidades" class="boton">Habilidades e Idiomas</a>
-            <a href="#proyectos" class="boton">Proyectos</a>
-            <a href="#academico" class="boton">Educación</a>
-            <a href="#laboral" class="boton">Experiencia</a>
-            <a href="#hobbies" class="boton">Intereses</a>
+            <a href="#habilidades" class="boton"><span class="es">Habilidades e Idiomas</span><span class="en">Skills & Languages</span></a>
+            <a href="#proyectos" class="boton"><span class="es">Proyectos</span><span class="en">Projects</span></a>
+            <a href="#academico" class="boton"><span class="es">Educación</span><span class="en">Education</span></a>
+            <a href="#laboral" class="boton"><span class="es">Experiencia</span><span class="en">Experience</span></a>
+            <a href="#hobbies" class="boton"><span class="es">Intereses</span><span class="en">Interests</span></a>
         </div>
 
         <div id="habilidades" class="seccion-completa seccion-oculta">
-            <h2>Habilidades e Idiomas</h2>
+            <h2><span class="es">Habilidades e Idiomas</span><span class="en">Skills & Languages</span></h2>
             <div class="skills-grid">
                 <div class="skill-box">
-                    <h3>Tecnologías</h3>
+                    <h3><span class="es">Tecnologías</span><span class="en">Technologies</span></h3>
                     <ul>
-                        <li>Java & Kotlin (Intermedio)</li>
-                        <li>Python (básico)</li>
-                        <li>HTML, CSS, JavaScript (Intermedio)</li>
-                        
+                        <li>Java & Kotlin (<span class="es">Intermedio</span><span class="en">Intermediate</span>)</li>
+                        <li>Python (<span class="es">básico</span><span class="en">Basic</span>)</li>
+                        <li>HTML, CSS, JavaScript (<span class="es">Intermedio</span><span class="en">Intermediate</span>)</li>
                     </ul>
                 </div>
                 <div class="skill-box">
-                    <h3>Idiomas</h3>
+                    <h3><span class="es">Idiomas</span><span class="en">Languages</span></h3>
                     <ul>
-                        <li><strong>Español:</strong> Nativo</li>
-                        <li><strong>Inglés:</strong>  certificado por EXCI - 90/100 <br> <a href="CERTIFICADO EXCI AOH.pdf" target="_blank" style="font-size: 0.9em; color: #4a6fa5;"><strong>[Ver Certificado]</strong></a></li>
-                        <li><strong>Japonés:</strong> Intermedio (Certificado EF International Language School)</li>
+                        <li><strong><span class="es">Español:</span><span class="en">Spanish:</span></strong> <span class="es">Nativo</span><span class="en">Native</span></li>
+                        <li><strong><span class="es">Inglés:</span><span class="en">English:</span></strong> B2 <span class="es">certificado por</span><span class="en">certified by</span> EXCI - 90/100 <br> <a href="CERTIFICADO EXCI AOH.pdf" target="_blank" style="font-size: 0.9em; color: #4a6fa5;"><strong><span class="es">[Ver Certificado]</span><span class="en">[View Certificate]</span></strong></a></li>
+                        <li><strong><span class="es">Japonés:</span><span class="en">Japanese:</span></strong> <span class="es">Intermedio (Certificado EF International Language School)</span><span class="en">Intermediate (EF International Language School Certificate)</span></li>
                     </ul>
                 </div>
             </div>
         </div>
 
         <div id="proyectos" class="seccion-completa seccion-oculta">
-            <h2>Mis Proyectos</h2>
+            <h2><span class="es">Mis Proyectos</span><span class="en">My Projects</span></h2>
             
             <div class="proyecto-item">
-                <h3>Mod de Minecraft: Jujutsu Kaisen (2026)</h3>
-                <p>Actualmente programo un mod de Jujutsu Kaisen para Minecraft 1.21.1 desarrollado en <strong>Java y Kotlin</strong> utilizando el framework de <strong>Fabric/Forge</strong>.</p>
-                <a href="https://www.curseforge.com/minecraft/mc-mods/olvera-no-maho" target="_blank" class="link-proyecto">Ver en CurseForge</a>
+                <h3><span class="es">Mod de Minecraft: Jujutsu Kaisen (2026)</span><span class="en">Minecraft Mod: Jujutsu Kaisen (2026)</span></h3>
+                <p class="es">Actualmente programo un mod de Jujutsu Kaisen para Minecraft 1.21.1 desarrollado en <strong>Java y Kotlin</strong> utilizando el framework de <strong>Fabric/Forge</strong>.</p>
+                <p class="en">Currently developing a Jujutsu Kaisen mod for Minecraft 1.21.1 in <strong>Java and Kotlin</strong> using the <strong>Fabric/Forge</strong> framework.</p>
+                <a href="https://www.curseforge.com/minecraft/mc-mods/olvera-no-maho" target="_blank" class="link-proyecto"><span class="es">Ver en CurseForge</span><span class="en">View on CurseForge</span></a>
             </div>
 
             <div class="proyecto-item">
-                <h3>Inventario HTOWNKICKS (2025)</h3>
-                <p>Programé un sistema de inventario con un tracker en tiempo real del precio del dólar para un negocio de compra/venta de tenis (USA). Incluye filtros dinámicos y registro de ventas calculando automáticamente las ganancias por conversión de divisas.</p>
+                <h3><span class="es">Inventario HTOWNKICKS (2025)</span><span class="en">HTOWNKICKS Inventory (2025)</span></h3>
+                <p class="es">Programé un sistema de inventario con un tracker en tiempo real del precio del dólar para un negocio de compra/venta de tenis (USA). Incluye filtros dinámicos y registro de ventas calculando automáticamente las ganancias por conversión de divisas.</p>
+                <p class="en">Programmed an inventory system with a real-time USD price tracker for a sneaker trading business (USA). Includes dynamic filters and sales logging, automatically calculating profits from currency conversion.</p>
             </div>
             
             <div class="proyecto-item">
-                <h3>Mod de Asteroids (2025)</h3>
-                <p>Cree un mod sencillo para Asteroids utilizando netbrains con <strong>Java</strong>.</p>
+                <h3><span class="es">Mod de Asteroids (2025)</span><span class="en">Asteroids Mod (2025)</span></h3>
+                <p class="es">Cree un mod sencillo para Asteroids utilizando netbrains con <strong>Java</strong>.</p>
+                <p class="en">Created a simple Asteroids mod using Netbeans with <strong>Java</strong>.</p>
             </div>
              <div class="proyecto-item">
-                <h3>Curriculum Vitae Web (2024)</h3>
-                <p>Desarrollo de este currículum web utilizando <strong>HTML y CSS</strong>.</p>
+                <h3><span class="es">Curriculum Vitae Web (2024)</span><span class="en">Web Resume (2024)</span></h3>
+                <p class="es">Desarrollo de este currículum web utilizando <strong>HTML y CSS</strong>.</p>
+                <p class="en">Developed this web resume using <strong>HTML and CSS</strong>.</p>
             </div>
         </div>
 
         <div id="academico" class="seccion-completa seccion-oculta">
-            <h2>Educación</h2>
+            <h2><span class="es">Educación</span><span class="en">Education</span></h2>
 
             <div class="edu-item">
-                <h3>Diplomado de Analista de Ciberseguridad</h3>
-                <p><strong>Facultad De Ingeniería Mecánica y Eléctrica (UANL)</strong> | <em>Marzo 2026 - Mayo 2026</em></p>
-                <p>Formación especializada en seguridad informática, análisis de vulnerabilidades y protección de infraestructuras tecnológicas. (actualmente estoy esperando el certificado)</p>
+                <h3><span class="es">Diplomado de Analista de Ciberseguridad</span><span class="en">Cybersecurity Analyst Diploma</span></h3>
+                <p><strong><span class="es">Facultad De Ingeniería Mecánica y Eléctrica (UANL)</span><span class="en">Faculty of Mechanical and Electrical Engineering (UANL)</span></strong> | <em><span class="es">Marzo 2026 - Mayo 2026</span><span class="en">March 2026 - May 2026</span></em></p>
+                <p class="es">Formación especializada en seguridad informática, análisis de vulnerabilidades y protección de infraestructuras tecnológicas. (actualmente estoy esperando el certificado)</p>
+                <p class="en">Specialized training in information security, vulnerability analysis, and protection of technological infrastructure. (Currently waiting for certificate)</p>
             </div>
             
             <div class="edu-item">
-                <h3>Facultad De Ingeniería Mecánica y Eléctrica (UANL)</h3>
-                <p><strong>Ingeniería en Tecnología de Software</strong> | <em>Agosto 2023 - Junio 2028 (Esperado)</em></p>
+                <h3><span class="es">Facultad De Ingeniería Mecánica y Eléctrica (UANL)</span><span class="en">Faculty of Mechanical and Electrical Engineering (UANL)</span></h3>
+                <p><strong><span class="es">Ingeniería en Tecnología de Software</span><span class="en">Software Engineering</span></strong> | <em><span class="es">Agosto 2023 - Junio 2028 (Esperado)</span><span class="en">August 2023 - June 2028 (Expected)</span></em></p>
                 <div class="galeria-academica">
                     <img src="fime.jpg" alt="FIME" class="img-expandible">
                 </div>
             </div>
 
             <div class="edu-item">
-                <h3>EF International Language School (Tokyo, Japón)</h3>
-                <p><strong>Estudios de Idioma Japonés e Inmersión Cultural</strong> | <em>Dic 2024 - Ene 2025</em></p>
-                <p>Graduado en nivel intermedio-avanzado con promedio final de 90.</p>
+                <h3>EF International Language School (Tokyo, <span class="es">Japón</span><span class="en">Japan</span>)</h3>
+                <p><strong><span class="es">Estudios de Idioma Japonés e Inmersión Cultural</span><span class="en">Japanese Language Studies and Cultural Immersion</span></strong> | <em><span class="es">Dic 2024 - Ene 2025</span><span class="en">Dec 2024 - Jan 2025</span></em></p>
+                <p class="es">Graduado en nivel intermedio-avanzado con promedio final de 90.</p>
+                <p class="en">Graduated at intermediate-advanced level with a final average of 90.</p>
                 <div class="galeria-academica">
                     <img src="japon.jpg" alt="Tokyo" class="img-expandible">
                 </div>
@@ -111,12 +127,13 @@
         </div>
 
         <div id="laboral" class="seccion-completa seccion-oculta">
-            <h2>Experiencia Laboral</h2>
+            <h2><span class="es">Experiencia Laboral</span><span class="en">Work Experience</span></h2>
             
             <div class="job-item">
-                <h3>Piloto de Dron en Obras Públicas - Municipio de Guadalupe</h3>
+                <h3><span class="es">Piloto de Dron en Obras Públicas - Municipio de Guadalupe</span><span class="en">Drone Pilot for Public Works - Municipality of Guadalupe</span></h3>
                 <p><em>2023 - 2024</em></p>
-                <p>Recabación de evidencias fotográficas y de video para la documentación archivística y seguimiento de avances de obra. Demostró alta responsabilidad en el manejo de hardware costoso, control de datos y cumplimiento de tiempos de entrega.</p>
+                <p class="es">Recabación de evidencias fotográficas y de video para la documentación archivística y seguimiento de avances de obra. Demostró alta responsabilidad en el manejo de hardware costoso, control de datos y cumplimiento de tiempos de entrega.</p>
+                <p class="en">Gathered photographic and video evidence for archival documentation and tracking of construction progress. Demonstrated high responsibility in handling expensive hardware, data control, and meeting delivery deadlines.</p>
                 <div class="video-container">
                     <iframe width="560" height="315" src="https://www.youtube.com/embed/HP_7OBI2qJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                 </div>
@@ -124,11 +141,12 @@
         </div>
 
         <div id="hobbies" class="seccion-completa seccion-oculta">
-            <h2>Intereses y Hobbies</h2>
+            <h2><span class="es">Intereses y Hobbies</span><span class="en">Interests and Hobbies</span></h2>
             
             <div class="hobby-item">
-                <h3>Deportes y Disciplina</h3>
-                <p>Tengo 14 años entrenando <strong>Taekwondo (Cinta Negra 3er Dan)</strong>. Esta disciplina me ha forjado constancia, resiliencia y enfoque a largo plazo. También practico fútbol lo que impacta en mis habilidades de trabajo en equipo y comunicación.</p>
+                <h3><span class="es">Deportes y Disciplina</span><span class="en">Sports and Discipline</span></h3>
+                <p class="es">Tengo 14 años entrenando <strong>Taekwondo (Cinta Negra 3er Dan)</strong>. Esta disciplina me ha forjado constancia, resiliencia y enfoque a largo plazo. También practico fútbol lo que impacta en mis habilidades de trabajo en equipo y comunicación.</p>
+                <p class="en">I have been training <strong>Taekwondo for 14 years (3rd Dan Black Belt)</strong>. This discipline has forged consistency, resilience, and long-term focus. I also play soccer, which impacts my teamwork and communication skills.</p>
                 <div class="galeria-academica">
                     <img src="taekwondo.jpg" alt="Taekwondo" class="img-expandible">
                     <img src="futbol.jpg" alt="Futbol" class="img-expandible">
@@ -136,16 +154,18 @@
             </div>
 
             <div class="hobby-item">
-                <h3>Tecnología y Hardware</h3>
-                <p>Soy un entusiasta del hardware; en mi tiempo libre disfruto investigando y diseñando teclados custom. </p>
+                <h3><span class="es">Tecnología y Hardware</span><span class="en">Technology and Hardware</span></h3>
+                <p class="es">Soy un entusiasta del hardware; en mi tiempo libre disfruto investigando y diseñando teclados custom.</p>
+                <p class="en">I am a hardware enthusiast; in my free time, I enjoy researching and designing custom keyboards.</p>
                 <div class="galeria-academica">
                     <img src="teclados.jpeg" alt="Teclados Custom" class="img-expandible"><img src="1.jpeg" alt="Teclados Custom" class="img-expandible">
                 </div>
             </div>
             
             <div class="hobby-item">
-                <h3>Idiomas</h3>
-                <p>Disfruto mucho aprendiendo nuevos idiomas y culturas, habilidad que fortalecí durante mi estancia en Japón.</p>
+                <h3><span class="es">Idiomas</span><span class="en">Languages</span></h3>
+                <p class="es">Disfruto mucho aprendiendo nuevos idiomas y culturas, habilidad que fortalecí durante mi estancia en Japón.</p>
+                <p class="en">I greatly enjoy learning new languages and cultures, a skill I strengthened during my stay in Japan.</p>
                 <div class="galeria-academica">
                     <img src="idiomas.jpeg" alt="Idiomas" class="img-expandible">
                 </div>
@@ -164,10 +184,47 @@
         // Alerta de bienvenida (Solo 1 vez por sesión)
         window.onload = function() {
             if (!sessionStorage.getItem('bienvenido_visto')) {
-                alert("¡Bienvenido a mi Curriculum Vitae!\n\nAquí encontrarás información sobre mi formación académica, experiencia laboral, proyectos personales y mis intereses.");
+                const isEnglish = document.body.classList.contains('lang-en');
+                if (isEnglish) {
+                    alert("Welcome to my Resume!\n\nHere you will find information about my academic background, work experience, personal projects, and my interests.");
+                } else {
+                    alert("¡Bienvenido a mi Curriculum Vitae!\n\nAquí encontrarás información sobre mi formación académica, experiencia laboral, proyectos personales y mis intereses.");
+                }
                 sessionStorage.setItem('bienvenido_visto', 'true');
             }
         };
+
+        // Lógica de cambio de idioma
+        const langCheckbox = document.getElementById('lang-checkbox');
+        
+        // Cargar preferencia de idioma si existe
+        const savedLang = localStorage.getItem('cv-lang');
+        if (savedLang === 'es') {
+            document.body.classList.remove('lang-en');
+            document.body.classList.add('lang-es');
+            langCheckbox.checked = true;
+            document.documentElement.lang = "es";
+        } else {
+            // Por defecto es inglés como pidió el usuario
+            document.body.classList.remove('lang-es');
+            document.body.classList.add('lang-en');
+            langCheckbox.checked = false;
+            document.documentElement.lang = "en";
+        }
+
+        langCheckbox.addEventListener('change', function() {
+            if (this.checked) {
+                // Cambiar a Español
+                document.body.classList.replace('lang-en', 'lang-es');
+                document.documentElement.lang = "es";
+                localStorage.setItem('cv-lang', 'es');
+            } else {
+                // Cambiar a Inglés
+                document.body.classList.replace('lang-es', 'lang-en');
+                document.documentElement.lang = "en";
+                localStorage.setItem('cv-lang', 'en');
+            }
+        });
 
         // Dinamismo: Intersection Observer para animar las secciones al hacer scroll
         const observer = new IntersectionObserver((entries) => {
