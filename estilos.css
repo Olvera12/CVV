@@ -1,407 +1,464 @@
-html {
-    scroll-behavior: smooth;
+/* ========================================================
+   VARIABLES GLOBALES (Modo Claro por Defecto)
+   ======================================================== */
+:root {
+    --bg-color: #f4f7f6;
+    --card-bg: #ffffff;
+    --text-main: #2d3436;
+    --text-muted: #636e72;
+    --primary: #0984e3;
+    --primary-hover: #0762a8;
+    --border: #dfe6e9;
+    
+    /* Colores para las etiquetas de tecnologías */
+    --badge-java: #e17055;
+    --badge-kotlin: #6c5ce7;
+    --badge-firebase: #fdcb6e;
+    --badge-js: #f1c40f;
+    --badge-pwa: #00b894;
+    --badge-api: #d63031;
+    --badge-web: #0984e3;
+}
+
+/* ========================================================
+   VARIABLES MODO OSCURO
+   ======================================================== */
+[data-theme="dark"] {
+    --bg-color: #0f1115;
+    --card-bg: #1c1f26;
+    --text-main: #f5f6fa;
+    --text-muted: #a4b0be;
+    --primary: #48dbfb;
+    --primary-hover: #0abde3;
+    --border: #2f3542;
+}
+
+/* Reset y Configuración Base */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 body {
-    font-family: Arial, sans-serif;
-    background-color: #f9f9f9;
-    margin: 0;
-    padding: 20px;
+    font-family: 'Inter', sans-serif;
+    background-color: var(--bg-color);
+    color: var(--text-main);
+    line-height: 1.6;
+    /* Transición suave al cambiar de tema */
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
-/* Animaciones y dinamismo */
-.fade-in {
-    animation: fadeIn 0.8s ease-in;
-}
-
-@keyframes fadeIn {
-    from { opacity: 0; transform: translateY(-10px); }
-    to { opacity: 1; transform: translateY(0); }
-}
-
-.seccion-oculta {
-    opacity: 0;
-    transform: translateY(20px);
-    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
-}
-
-.seccion-oculta.visible {
-    opacity: 1;
-    transform: translateY(0);
-}
-
+/* Contenedor Principal */
 .contenedor {
-    max-width: 800px;
-    margin: 0 auto;
-    background-color: white;
-    padding: 30px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
-    border-radius: 8px;
+    max-width: 900px;
+    margin: 30px auto;
+    padding: 40px;
+    background-color: var(--card-bg);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
-h1 {
-    color: #333;
-    text-align: center;
-    border-bottom: 2px solid #333;
-    padding-bottom: 10px;
-    margin-bottom: 30px;
-}
-
-.encabezado {
+/* ========================================================
+   CONTROLES SUPERIORES (Toggles)
+   ======================================================== */
+.controls {
+    max-width: 900px;
+    margin: 20px auto 0;
     display: flex;
-    align-items: center;
-    margin-bottom: 15px;
-}
-
-.foto-perfil img {
-    width: 120px;
-    height: 120px;
-    border-radius: 50%;
-    object-fit: cover;
-    border: 3px solid #4a6fa5;
-    margin-right: 25px;
-    transition: transform 0.3s;
-}
-
-.foto-perfil img:hover {
-    transform: scale(1.05);
-}
-
-.info-personal p {
-    margin: 8px 0;
-    color: #444;
-}
-
-.info-personal a {
-    color: #4a6fa5;
-    text-decoration: none;
-    font-weight: bold;
-}
-
-.info-personal a:hover {
-    text-decoration: underline;
-}
-
-.resumen-profesional {
-    background-color: #f0f4f8;
-    padding: 15px;
-    border-left: 4px solid #4a6fa5;
-    border-radius: 4px;
-    margin-bottom: 25px;
-    font-style: italic;
-    color: #333;
-    line-height: 1.5;
-}
-
-hr {
-    border: 0;
-    height: 1px;
-    background-color: #eee;
-    margin: 25px 0;
-}
-
-.botones {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 10px;
-    justify-content: center;
-    margin-bottom: 30px;
-}
-
-.boton {
-    padding: 10px 20px;
-    background-color: #4a6fa5;
-    color: white;
-    text-align: center;
-    text-decoration: none;
-    border-radius: 5px;
-    transition: background-color 0.3s, transform 0.2s;
-    flex-grow: 1;
-}
-
-.boton:hover {
-    background-color: #3a5a80;
-    transform: translateY(-2px);
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
-}
-
-.seccion-completa {
-    padding: 20px 0;
-    border-bottom: 1px dashed #eee;
-}
-
-.seccion-completa:last-child {
-    border-bottom: none;
-}
-
-.seccion-completa h2 {
-    color: #4a6fa5;
-    border-bottom: 2px solid #f0f4f8;
-    padding-bottom: 10px;
-    margin-bottom: 20px;
-}
-
-.skills-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
+    justify-content: flex-end;
     gap: 20px;
+    padding: 0 30px;
 }
 
-.skill-box {
-    background: #f9f9f9;
-    padding: 15px;
-    border-radius: 6px;
-    border-left: 3px solid #3a5a80;
-}
-
-.skill-box h3 {
-    margin-top: 0;
-    color: #333;
-    font-size: 1.1em;
-}
-
-.skill-box ul {
-    margin: 0;
-    padding-left: 20px;
-    color: #555;
-    line-height: 1.4;
-}
-
-.skill-box li {
-    margin-bottom: 5px;
-}
-
-.proyecto-item, .edu-item, .job-item, .hobby-item {
-    margin-bottom: 25px;
-}
-
-.proyecto-item h3, .edu-item h3, .job-item h3, .hobby-item h3 {
-    color: #333;
-    margin-bottom: 5px;
-}
-
-.proyecto-item p, .edu-item p, .job-item p, .hobby-item p {
-    color: #555;
-    line-height: 1.5;
-}
-
-.link-proyecto {
-    display: inline-block;
-    margin-top: 10px;
-    padding: 6px 12px;
-    background-color: #4a6fa5;
-    color: #fdfdfd;
-    text-decoration: none;
-    border-radius: 4px;
-    font-size: 0.9em;
-    transition: background-color 0.2s;
-}
-
-.link-proyecto:hover {
-    background-color: #ddd;
-}
-
-.galeria-academica {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 15px;
-    margin: 15px 0;
-}
-
-.galeria-academica img {
-    width: 200px;
-    height: 150px;
-    object-fit: cover;
-    border-radius: 5px;
-    border: 1px solid #ddd;
-    transition: transform 0.3s;
-}
-
-.galeria-academica img:hover {
-    transform: scale(1.03);
-    box-shadow: 0 4px 10px rgba(0,0,0,0.15);
-}
-
-/* Modal y expandir imágenes */
-.img-expandible {
-    cursor: pointer;
-}
-
-.modal {
-    display: none;
-    position: fixed;
-    z-index: 9999;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0,0,0,0.85);
-    align-items: center;
-    justify-content: center;
-}
-
-.modal-contenido {
-    max-width: 90%;
-    max-height: 90%;
-    border-radius: 8px;
-    box-shadow: 0 5px 25px rgba(0,0,0,0.5);
-    animation: zoomIn 0.3s ease;
-}
-
-@keyframes zoomIn {
-    from {transform: scale(0.8); opacity: 0;}
-    to {transform: scale(1); opacity: 1;}
-}
-
-.cerrar-modal {
-    position: absolute;
-    top: 20px;
-    right: 40px;
-    color: #f1f1f1;
-    font-size: 50px;
-    font-weight: bold;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.cerrar-modal:hover {
-    color: #bbb;
-}
-
-/* Contenedor responsivo para YouTube */
-.video-container {
-    position: relative;
-    padding-bottom: 56.25%; /* Relación 16:9 */
-    height: 0;
-    overflow: hidden;
-    max-width: 100%;
-    border-radius: 8px;
-    margin-top: 15px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-}
-
-.video-container iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-}
-
-@media (max-width: 600px) {
-    .skills-grid {
-        grid-template-columns: 1fr;
-    }
-    .botones {
-        flex-direction: column;
-    }
-    .foto-perfil img {
-        width: 90px;
-        height: 90px;
-    }
-}
-
-/* =========================================
-   Language Toggle Switch
-   ========================================= */
-.lang-toggle-container {
-    position: fixed;
-    top: 20px;
-    right: 20px;
-    z-index: 1000;
+.lang-toggle-container, .theme-toggle-container {
     display: flex;
     align-items: center;
     gap: 10px;
-    background: rgba(255, 255, 255, 0.9);
-    padding: 10px 15px;
-    border-radius: 30px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.15);
-    backdrop-filter: blur(5px);
-    transition: transform 0.3s, box-shadow 0.3s;
+    font-weight: 600;
 }
 
-.lang-toggle-container:hover {
-    transform: translateY(-2px);
-    box-shadow: 0 6px 20px rgba(0,0,0,0.2);
-}
-
-.lang-toggle-text {
-    font-weight: bold;
-    color: #4a6fa5;
-    font-size: 14px;
-    cursor: pointer;
-    user-select: none;
-}
-
-.lang-toggle-text.en {
-    color: #3a5a80;
-}
-
-.lang-toggle-text.es {
-    color: #777;
-}
-
-body.lang-es .lang-toggle-text.en { color: #777; }
-body.lang-es .lang-toggle-text.es { color: #3a5a80; }
-
-.lang-switch {
+/* Switch (Interruptor) */
+.switch {
     position: relative;
-    width: 60px;
-    height: 30px;
+    display: inline-block;
+    width: 50px;
+    height: 26px;
 }
-
-.lang-switch input {
-    opacity: 0;
-    width: 0;
-    height: 0;
-}
-
+.switch input { opacity: 0; width: 0; height: 0; }
 .slider {
     position: absolute;
     cursor: pointer;
     top: 0; left: 0; right: 0; bottom: 0;
-    background-color: #3a5a80;
+    background-color: #b2bec3;
     transition: .4s;
     border-radius: 30px;
-    box-shadow: inset 0 2px 5px rgba(0,0,0,0.2);
 }
-
 .slider:before {
     position: absolute;
-    content: "🇺🇸";
-    font-size: 16px;
+    content: "";
+    height: 20px; width: 20px;
+    left: 3px; bottom: 3px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+input:checked + .slider {
+    background-color: var(--primary);
+}
+input:checked + .slider:before {
+    transform: translateX(24px);
+}
+.slider.round .icon {
+    position: absolute;
+    font-size: 13px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.icon.sun { left: 6px; }
+.icon.moon { right: 6px; }
+
+/* Ocultar idiomas según estado del body */
+.lang-es .en { display: none; }
+.lang-en .es { display: none; }
+
+/* ========================================================
+   ENCABEZADO Y FOTO
+   ======================================================== */
+.encabezado {
     display: flex;
     align-items: center;
-    justify-content: center;
-    height: 24px;
-    width: 24px;
-    left: 3px;
-    bottom: 3px;
-    background-color: white;
-    transition: .4s cubic-bezier(0.68, -0.55, 0.27, 1.55);
+    gap: 30px;
+    margin-bottom: 35px;
+    padding-bottom: 25px;
+    border-bottom: 1px solid var(--border);
+}
+.foto-perfil img {
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
-    box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+    object-fit: cover;
+    border: 4px solid var(--primary);
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+}
+.info-personal h1 {
+    font-size: 2.4rem;
+    font-weight: 700;
+    margin-bottom: 5px;
+    line-height: 1.2;
+}
+.info-personal .subtitulo {
+    font-size: 1.2rem;
+    color: var(--primary);
+    margin-bottom: 15px;
+    font-weight: 600;
+}
+.contacto-links a {
+    color: var(--text-muted);
+    text-decoration: none;
+    margin-right: 15px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+.contacto-links a:hover {
+    color: var(--primary);
 }
 
-input:checked + .slider {
-    background-color: #1a7b48;
+/* ========================================================
+   BOTÓN PARA DESCARGAR PDF
+   ======================================================== */
+.btn-download {
+    margin-top: 15px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 8px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    cursor: pointer;
+    transition: background-color 0.2s, transform 0.1s;
+    font-family: 'Inter', sans-serif;
+}
+.btn-download:hover {
+    background-color: var(--primary-hover);
+    transform: translateY(-2px);
 }
 
-input:checked + .slider:before {
-    transform: translateX(30px);
-    content: "🇲🇽";
+/* Resumen Profesional */
+.resumen-profesional {
+    font-size: 1.05rem;
+    color: var(--text-muted);
+    margin-bottom: 35px;
 }
 
-/* Language display logic */
-body.lang-en .es { display: none !important; }
-body.lang-es .en { display: none !important; }
+/* Botones de Navegación */
+.botones {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+.botones .boton {
+    text-decoration: none;
+    color: var(--primary);
+    border: 2px solid var(--primary);
+    padding: 8px 18px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 0.9rem;
+    transition: all 0.3s ease;
+}
+.botones .boton:hover {
+    background-color: var(--primary);
+    color: var(--card-bg);
+}
 
-/* Hacer el switch responsive */
-@media (max-width: 600px) {
-    .lang-toggle-container {
-        top: 10px;
-        right: 10px;
-        padding: 8px 12px;
-        transform: scale(0.9);
+/* ========================================================
+   SECCIONES Y TARJETAS
+   ======================================================== */
+.seccion-completa {
+    margin-bottom: 45px;
+    scroll-margin-top: 30px;
+}
+.seccion-completa h2 {
+    font-size: 1.6rem;
+    color: var(--primary);
+    border-bottom: 2px solid var(--border);
+    padding-bottom: 10px;
+    margin-bottom: 25px;
+}
+
+/* Habilidades */
+.skills-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+.skill-box h3 {
+    margin-bottom: 12px;
+    font-size: 1.15rem;
+}
+.tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.tag {
+    background: var(--bg-color);
+    border: 1px solid var(--border);
+    padding: 6px 14px;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+}
+.idiomas-lista { list-style: none; }
+.idiomas-lista li {
+    margin-bottom: 12px;
+    padding-left: 20px;
+    position: relative;
+}
+.idiomas-lista li::before {
+    content: "•";
+    color: var(--primary);
+    position: absolute;
+    left: 0;
+    font-size: 1.5rem;
+    top: -5px;
+}
+.link-certificado {
+    color: var(--primary);
+    text-decoration: none;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-left: 5px;
+}
+.link-certificado:hover { text-decoration: underline; }
+.desc-ligera { color: var(--text-muted); font-size: 0.85rem; }
+
+/* Tarjetas de Proyectos */
+.proyectos-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 20px;
+}
+.proyecto-card {
+    background: var(--bg-color);
+    border: 1px solid var(--border);
+    padding: 25px;
+    border-radius: 12px;
+    transition: transform 0.2s, box-shadow 0.2s;
+}
+.proyecto-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.06);
+}
+.proyecto-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+.proyecto-header h3 {
+    font-size: 1.25rem;
+}
+.proyecto-header .año {
+    color: var(--text-muted);
+    font-size: 0.9rem;
+    font-weight: normal;
+    margin-left: 8px;
+}
+.tech-stack {
+    display: flex;
+    gap: 6px;
+}
+.badge {
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+    font-weight: 700;
+    color: white;
+}
+.badge.firebase { background-color: var(--badge-firebase); color: #2d3436; }
+.badge.java { background-color: var(--badge-java); }
+.badge.kotlin { background-color: var(--badge-kotlin); }
+.badge.js { background-color: var(--badge-js); color: #2d3436;}
+.badge.pwa { background-color: var(--badge-pwa); }
+.badge.api { background-color: var(--badge-api); }
+
+.proyecto-card p {
+    color: var(--text-muted);
+    margin-bottom: 20px;
+    font-size: 0.95rem;
+}
+.proyecto-links {
+    display: flex;
+    gap: 12px;
+}
+.btn-link {
+    background: var(--primary);
+    color: #fff;
+    text-decoration: none;
+    padding: 8px 14px;
+    border-radius: 6px;
+    font-size: 0.9rem;
+    font-weight: 600;
+}
+.btn-link.outline {
+    background: transparent;
+    color: var(--primary);
+    border: 1px solid var(--primary);
+}
+
+/* ========================================================
+   TIMELINE (Educación y Experiencia)
+   ======================================================== */
+.timeline {
+    position: relative;
+    padding-left: 25px;
+    border-left: 2px solid var(--border);
+}
+.timeline-item {
+    position: relative;
+    margin-bottom: 35px;
+}
+.timeline-item:last-child { margin-bottom: 0; }
+.timeline-dot {
+    position: absolute;
+    left: -32px;
+    top: 5px;
+    width: 12px;
+    height: 12px;
+    background: var(--border);
+    border-radius: 50%;
+}
+.timeline-dot.highlight {
+    background: var(--primary);
+    box-shadow: 0 0 0 4px rgba(9, 132, 227, 0.2);
+}
+.timeline-content h3 {
+    font-size: 1.15rem;
+    margin-bottom: 4px;
+}
+.timeline-content .institucion {
+    color: var(--primary);
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+.timeline-content .desc {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* ========================================================
+   RESPONSIVE (Móviles)
+   ======================================================== */
+@media (max-width: 768px) {
+    .encabezado {
+        flex-direction: column;
+        text-align: center;
+    }
+    .contacto-links {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+    }
+    .skills-grid {
+        grid-template-columns: 1fr;
+    }
+    .botones {
+        justify-content: center;
+    }
+    .proyecto-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+
+/* ========================================================
+   ESTILOS DE IMPRESIÓN PARA PDF (MUY IMPORTANTE)
+   ======================================================== */
+@media print {
+    body {
+        background-color: white !important;
+        color: black !important;
+    }
+    .contenedor {
+        box-shadow: none;
+        margin: 0;
+        padding: 0;
+        border: none;
+        max-width: 100%;
+    }
+    /* Ocultar elementos innecesarios al imprimir */
+    .controls,
+    .btn-download,
+    .botones {
+        display: none !important;
+    }
+    /* Forzar hipervínculos azules para que el reclutador sepa que puede dar clic en el PDF */
+    a {
+        color: #0984e3 !important;
+        text-decoration: underline !important;
+    }
+    /* Asegurar que las tarjetas no se corten a mitad de hoja */
+    .proyecto-card, .timeline-item {
+        page-break-inside: avoid;
+    }
+    /* Quitar fondos de las badges para economizar tinta, dejarlas en borde */
+    .badge, .tag {
+        background: transparent !important;
+        color: black !important;
+        border: 1px solid black !important;
+    }
+    .encabezado {
+        border-bottom: 2px solid black;
     }
 }
