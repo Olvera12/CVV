@@ -3,264 +3,297 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alejandro Olvera Hernandez - Software Engineering Portfolio">
+    <meta property="og:title" content="Alejandro Olvera - Software Engineer">
+    <meta property="og:image" content="foto.jpg">
     <title>CV Alejandro Olvera</title>
+    
+    <!-- Google Fonts: Inter -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Archivo CSS -->
     <link rel="stylesheet" href="estilos.css">
 </head>
 <body class="lang-en">
-    <!-- Language Toggle -->
-    <div class="lang-toggle-container fade-in">
-        <span class="lang-toggle-text en" onclick="document.getElementById('lang-checkbox').click()">EN</span>
-        <label class="lang-switch">
-            <input type="checkbox" id="lang-checkbox">
-            <span class="slider"></span>
-        </label>
-        <span class="lang-toggle-text es" onclick="document.getElementById('lang-checkbox').click()">ES</span>
-    </div>
+    <!-- Controles (Idioma y Tema Oscuro) -->
+    <nav class="controls">
+        <div class="lang-toggle-container">
+            <span class="lang-toggle-text en">EN</span>
+            <label class="switch">
+                <input type="checkbox" id="lang-checkbox">
+                <span class="slider"></span>
+            </label>
+            <span class="lang-toggle-text es">ES</span>
+        </div>
+        <div class="theme-toggle-container">
+            <label class="switch theme-switch">
+                <input type="checkbox" id="theme-checkbox">
+                <span class="slider round">
+                    <span class="icon sun">☀️</span>
+                    <span class="icon moon">🌙</span>
+                </span>
+            </label>
+        </div>
+    </nav>
 
-    <div class="contenedor fade-in">
-        <h1>Curriculum Vitae</h1>
-        
-        <div class="encabezado">
+    <main class="contenedor">
+        <header class="encabezado">
             <div class="foto-perfil">
-                <img src="foto.jpg" alt="Foto de Alejandro" class="img-expandible">
+                <img src="foto.jpg" alt="Alejandro Olvera" class="img-expandible">
             </div>
             <div class="info-personal">
-                <p><strong><span class="es">Nombre:</span><span class="en">Name:</span></strong> Alejandro Olvera Hernandez</p>
-                <p><strong><span class="es">Carrera:</span><span class="en">Degree:</span></strong> <span class="es">Ingeniería en Tecnología de Software</span><span class="en">Software Engineering</span></p>
-                <p><strong><span class="es">Contacto:</span><span class="en">Contact:</span></strong> olveraalexjr@gmail.com |</p>
-                <p><strong><span class="es">Enlaces:</span><span class="en">Links:</span></strong> <a href="https://www.linkedin.com/in/alex-olvera-ba346a3a6?utm_source=share_via&utm_content=profile&utm_medium=member_ios" target="_blank">LinkedIn</a> | <a href="https://github.com/olvera12" target="_blank">GitHub</a></p>
+                <h1>Alejandro Olvera Hernandez</h1>
+                <h2 class="subtitulo">
+                    <span class="es">Estudiante de Ingeniería de Software</span>
+                    <span class="en">Software Engineering Student</span>
+                </h2>
+                <div class="contacto-links">
+                    <a href="mailto:olveraalexjr@gmail.com">olveraalexjr@gmail.com</a>
+                    <a href="https://www.linkedin.com/in/alex-olvera-ba346a3a6" target="_blank">LinkedIn</a>
+                    <a href="https://github.com/olvera12" target="_blank">GitHub</a>
+                </div>
+                <!-- Botón para imprimir a PDF -->
+                <button class="btn-download" onclick="window.print()">
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path><polyline points="7 10 12 15 17 10"></polyline><line x1="12" y1="15" x2="12" y2="3"></line></svg>
+                    <span class="es">Descargar CV (PDF)</span><span class="en">Download Resume (PDF)</span>
+                </button>
             </div>
-        </div>
+        </header>
 
-        <div class="resumen-profesional">
-            <p class="es">Estudiante de Ingeniería en Tecnología de Software (2023 - 2028) con pasión por el modding en Java/Kotlin y el hardware. Busco una oportunidad para aplicar mis conocimientos técnicos como desarrollador Junior, analista de ciberseguridad o Practicante.</p>
-            <p class="en">Software Engineering student (2023 - 2028) with a passion for Java/Kotlin modding and hardware. Seeking an opportunity to apply my technical knowledge as a Junior Developer, Cybersecurity Analyst, or Intern.</p>
-        </div>
+        <section class="resumen-profesional">
+            <p class="es">Estudiante de Ingeniería en Tecnología de Software (2023 - 2028) apasionado por el desarrollo Backend, arquitecturas Full-Stack y el hardware. Busco una oportunidad para aportar valor técnico como Desarrollador Junior o Practicante, combinando pensamiento estructurado con tecnologías modernas.</p>
+            <p class="en">Software Engineering student (2023 - 2028) passionate about Backend development, Full-Stack architectures, and hardware. Seeking an opportunity to bring technical value as a Junior Developer or Intern, combining structured problem-solving with cutting-edge technologies.</p>
+        </section>
 
-        <hr>
-
-        <div class="botones">
-            <a href="#habilidades" class="boton"><span class="es">Habilidades e Idiomas</span><span class="en">Skills & Languages</span></a>
+        <nav class="botones">
+            <a href="#habilidades" class="boton"><span class="es">Habilidades</span><span class="en">Skills</span></a>
             <a href="#proyectos" class="boton"><span class="es">Proyectos</span><span class="en">Projects</span></a>
             <a href="#academico" class="boton"><span class="es">Educación</span><span class="en">Education</span></a>
             <a href="#laboral" class="boton"><span class="es">Experiencia</span><span class="en">Experience</span></a>
-            <a href="#hobbies" class="boton"><span class="es">Intereses</span><span class="en">Interests</span></a>
-        </div>
+            <a href="#intereses" class="boton"><span class="es">Intereses</span><span class="en">Interests</span></a>
+        </nav>
 
-        <div id="habilidades" class="seccion-completa seccion-oculta">
-            <h2><span class="es">Habilidades e Idiomas</span><span class="en">Skills & Languages</span></h2>
+        <section id="habilidades" class="seccion-completa">
+            <h2><span class="es">Habilidades Técnicas e Idiomas</span><span class="en">Technical Skills & Languages</span></h2>
             <div class="skills-grid">
                 <div class="skill-box">
-                    <h3><span class="es">Tecnologías</span><span class="en">Technologies</span></h3>
-                    <ul>
-                        <li>Java & Kotlin (<span class="es">Intermedio</span><span class="en">Intermediate</span>)</li>
-                        <li>Python (<span class="es">básico</span><span class="en">Basic</span>)</li>
-                        <li>HTML, CSS, JavaScript (<span class="es">Intermedio</span><span class="en">Intermediate</span>)</li>
-                    </ul>
+                    <h3><span class="es">Lenguajes y Herramientas</span><span class="en">Languages & Tools</span></h3>
+                    <div class="tags-container">
+                        <span class="tag tech">Java</span>
+                        <span class="tag tech">Kotlin</span>
+                        <span class="tag tech">Python</span>
+                        <span class="tag tech">JavaScript</span>
+                        <span class="tag tech">Git / GitHub</span>
+                        <span class="tag tech">OOP / SOLID</span>
+                    </div>
+                    <h3 style="margin-top: 15px;"><span class="es">Web y Nube</span><span class="en">Web & Cloud</span></h3>
+                    <div class="tags-container">
+                        <span class="tag web">HTML5 / CSS3</span>
+                        <span class="tag web">Firebase (Firestore)</span>
+                        <span class="tag web">PWA (Service Workers)</span>
+                        <span class="tag web">APIs</span>
+                    </div>
                 </div>
                 <div class="skill-box">
                     <h3><span class="es">Idiomas</span><span class="en">Languages</span></h3>
-                    <ul>
+                    <ul class="idiomas-lista">
                         <li><strong><span class="es">Español:</span><span class="en">Spanish:</span></strong> <span class="es">Nativo</span><span class="en">Native</span></li>
-                        <li><strong><span class="es">Inglés:</span><span class="en">English:</span></strong> B2 <span class="es">certificado por</span><span class="en">certified by</span> EXCI - 90/100 <br> <a href="CERTIFICADO EXCI AOH.pdf" target="_blank" style="font-size: 0.9em; color: #4a6fa5;"><strong><span class="es">[Ver Certificado]</span><span class="en">[View Certificate]</span></strong></a></li>
-                        <li><strong><span class="es">Japonés:</span><span class="en">Japanese:</span></strong> <span class="es">Intermedio (Certificado EF International Language School)</span><span class="en">Intermediate (EF International Language School Certificate)</span></li>
+                        <li>
+                            <strong><span class="es">Inglés:</span><span class="en">English:</span></strong> B2 (90/100) 
+                            <a href="CERTIFICADO EXCI AOH.pdf" target="_blank" class="link-certificado"><span class="es">[Ver Certificado]</span><span class="en">[View Certificate]</span></a>
+                        </li>
+                        <li>
+                            <strong><span class="es">Japonés:</span><span class="en">Japanese:</span></strong> <span class="es">Intermedio</span><span class="en">Intermediate</span> 
+                            <span class="desc-ligera">(EF Tokyo)</span>
+                        </li>
                     </ul>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div id="proyectos" class="seccion-completa seccion-oculta">
-            <h2><span class="es">Mis Proyectos</span><span class="en">My Projects</span></h2>
+        <section id="proyectos" class="seccion-completa">
+            <h2><span class="es">Proyectos Destacados</span><span class="en">Featured Projects</span></h2>
+            <div class="proyectos-grid">
+                
+                <!-- Proyecto: CampuSafe -->
+                <article class="proyecto-card">
+                    <div class="proyecto-header">
+                        <h3>CampuSafe App (PWA) <span class="año">2026</span></h3>
+                        <div class="tech-stack">
+                            <span class="badge firebase">Firebase</span>
+                            <span class="badge js">JavaScript</span>
+                            <span class="badge pwa">PWA</span>
+                        </div>
+                    </div>
+                    <p class="es">Aplicación Web Progresiva para reportes de seguridad en el campus universitario. Integra sincronización de base de datos en tiempo real mediante <strong>Firebase Firestore</strong> y capacidades sin conexión mediante <em>Service Workers</em>.</p>
+                    <p class="en">Developed a Progressive Web App (PWA) for campus safety reporting. Implemented real-time database synchronization via <strong>Firebase Firestore</strong> and utilized <em>Service Workers</em> for offline capabilities.</p>
+                    <div class="proyecto-links">
+                        <a href="https://olvera12.github.io/campusafe-app/" target="_blank" class="btn-link">Live App</a>
+                        <a href="https://olvera12.github.io/campusafe-app/dashboard.html" target="_blank" class="btn-link outline">Admin Dashboard</a>
+                    </div>
+                </article>
+
+                <!-- Proyecto: Minecraft Mod -->
+                <article class="proyecto-card">
+                    <div class="proyecto-header">
+                        <h3>Minecraft Mod: Jujutsu Kaisen <span class="año">2026</span></h3>
+                        <div class="tech-stack">
+                            <span class="badge java">Java</span>
+                            <span class="badge kotlin">Kotlin</span>
+                            <span class="badge api">Forge API</span>
+                        </div>
+                    </div>
+                    <p class="es">Modificación compleja para Minecraft 1.21.1 usando <strong>Java, Kotlin y la API de Fabric/Forge</strong>. Aplicación de Programación Orientada a Objetos (POO) avanzada para implementar entidades personalizadas y mecánicas basadas en eventos.</p>
+                    <p class="en">Engineered a complex Minecraft 1.21.1 modification using <strong>Java, Kotlin, and the Fabric/Forge API</strong>. Applied advanced Object-Oriented Programming (OOP) to implement custom entities and event-driven mechanics.</p>
+                    <div class="proyecto-links">
+                        <a href="https://www.curseforge.com/" target="_blank" class="btn-link outline">View on CurseForge</a>
+                    </div>
+                </article>
+
+                <!-- Proyecto: HTOWNKICKS -->
+                <article class="proyecto-card">
+                    <div class="proyecto-header">
+                        <h3>HTOWNKICKS Inventory System <span class="año">2025</span></h3>
+                        <div class="tech-stack">
+                            <span class="badge js">JS/HTML/CSS</span>
+                            <span class="badge firebase">Firebase</span>
+                            <span class="badge api">REST API</span>
+                        </div>
+                    </div>
+                    <p class="es">Sistema <em>Full-Stack</em> de gestión de inventario para un negocio de calzado en EE.UU. Integra sincronización de datos en tiempo real con <strong>Firebase</strong> y consumo de API externa para conversión de divisas (USD) y cálculo de ganancias.</p>
+                    <p class="en">Built a Full-Stack inventory management system using HTML, CSS, JavaScript, and <strong>Firebase</strong>. Integrated real-time data sync and an external API for live USD currency conversion to automate profit calculations.</p>
+                </article>
+
+            </div>
+        </section>
+
+        <section id="academico" class="seccion-completa">
+            <h2><span class="es">Educación y Certificaciones</span><span class="en">Education & Certifications</span></h2>
             
-            <div class="proyecto-item">
-                <h3><span class="es">Mod de Minecraft: Jujutsu Kaisen (2026)</span><span class="en">Minecraft Mod: Jujutsu Kaisen (2026)</span></h3>
-                <p class="es">Actualmente programo un mod de Jujutsu Kaisen para Minecraft 1.21.1 desarrollado en <strong>Java y Kotlin</strong> utilizando el framework de <strong>Fabric/Forge</strong>.</p>
-                <p class="en">Currently developing a Jujutsu Kaisen mod for Minecraft 1.21.1 in <strong>Java and Kotlin</strong> using the <strong>Fabric/Forge</strong> framework.</p>
-                <a href="https://www.curseforge.com/minecraft/mc-mods/olvera-no-maho" target="_blank" class="link-proyecto"><span class="es">Ver en CurseForge</span><span class="en">View on CurseForge</span></a>
-            </div>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3><span class="es">Ingeniería en Tecnología de Software</span><span class="en">Software Engineering</span></h3>
+                        <p class="institucion">FIME (UANL) | Aug 2023 - Jun 2028 (Expected)</p>
+                    </div>
+                </div>
 
-            <div class="proyecto-item">
-                <h3><span class="es">Inventario HTOWNKICKS (2025)</span><span class="en">HTOWNKICKS Inventory (2025)</span></h3>
-                <p class="es">Programé un sistema de inventario con un tracker en tiempo real del precio del dólar para un negocio de compra/venta de tenis (USA). Incluye filtros dinámicos y registro de ventas calculando automáticamente las ganancias por conversión de divisas.</p>
-                <p class="en">Programmed an inventory system with a real-time USD price tracker for a sneaker trading business (USA). Includes dynamic filters and sales logging, automatically calculating profits from currency conversion.</p>
-            </div>
-            
-            <div class="proyecto-item">
-                <h3><span class="es">Mod de Asteroids (2025)</span><span class="en">Asteroids Mod (2025)</span></h3>
-                <p class="es">Cree un mod sencillo para Asteroids utilizando netbrains con <strong>Java</strong>.</p>
-                <p class="en">Created a simple Asteroids mod using Netbeans with <strong>Java</strong>.</p>
-            </div>
-             <div class="proyecto-item">
-                <h3><span class="es">Curriculum Vitae Web (2024)</span><span class="en">Web Resume (2024)</span></h3>
-                <p class="es">Desarrollo de este currículum web utilizando <strong>HTML y CSS</strong>.</p>
-                <p class="en">Developed this web resume using <strong>HTML and CSS</strong>.</p>
-            </div>
-        </div>
+                <div class="timeline-item">
+                    <div class="timeline-dot highlight"></div>
+                    <div class="timeline-content">
+                        <h3><span class="es">Diplomado Analista de Ciberseguridad</span><span class="en">Cybersecurity Analyst Diploma</span></h3>
+                        <p class="institucion">FIME (UANL) | Mar 2026 - May 2026</p>
+                        <p class="es desc">Entrenamiento especializado en seguridad de la información, análisis de vulnerabilidades y protección de infraestructura tecnológica.</p>
+                        <p class="en desc">Specialized training in information security, vulnerability analysis, and protection of technological infrastructure.</p>
+                        
+                        <!-- ENLACE AL CERTIFICADO DE CIBERSEGURIDAD (Actualizado) -->
+                        <a href="Alejandro Olvera Hernandez.pdf" target="_blank" class="link-certificado" style="margin-top: 5px; display: inline-block;">
+                            <span class="es">[Ver Certificado]</span><span class="en">[View Certificate]</span>
+                        </a>
+                    </div>
+                </div>
 
-        <div id="academico" class="seccion-completa seccion-oculta">
-            <h2><span class="es">Educación</span><span class="en">Education</span></h2>
-
-            <div class="edu-item">
-                <h3><span class="es">Diplomado de Analista de Ciberseguridad</span><span class="en">Cybersecurity Analyst Diploma</span></h3>
-                <p><strong><span class="es">Facultad De Ingeniería Mecánica y Eléctrica (UANL)</span><span class="en">Faculty of Mechanical and Electrical Engineering (UANL)</span></strong> | <em><span class="es">Marzo 2026 - Mayo 2026</span><span class="en">March 2026 - May 2026</span></em></p>
-                <p class="es">Formación especializada en seguridad informática, análisis de vulnerabilidades y protección de infraestructuras tecnológicas. (actualmente estoy esperando el certificado)</p>
-                <p class="en">Specialized training in information security, vulnerability analysis, and protection of technological infrastructure. (Currently waiting for certificate)</p>
-            </div>
-            
-            <div class="edu-item">
-                <h3><span class="es">Facultad De Ingeniería Mecánica y Eléctrica (UANL)</span><span class="en">Faculty of Mechanical and Electrical Engineering (UANL)</span></h3>
-                <p><strong><span class="es">Ingeniería en Tecnología de Software</span><span class="en">Software Engineering</span></strong> | <em><span class="es">Agosto 2023 - Junio 2028 (Esperado)</span><span class="en">August 2023 - June 2028 (Expected)</span></em></p>
-                <div class="galeria-academica">
-                    <img src="fime.jpg" alt="FIME" class="img-expandible">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Japanese Language Studies & Cultural Immersion</h3>
+                        <p class="institucion">EF International Language School (Tokyo, Japan) | Dec 2024 - Jan 2025</p>
+                        <p class="es desc">Graduado nivel intermedio-avanzado (promedio final 90/100).</p>
+                        <p class="en desc">Graduated at intermediate-advanced level with a final average of 90.</p>
+                    </div>
                 </div>
             </div>
+        </section>
 
-            <div class="edu-item">
-                <h3>EF International Language School (Tokyo, <span class="es">Japón</span><span class="en">Japan</span>)</h3>
-                <p><strong><span class="es">Estudios de Idioma Japonés e Inmersión Cultural</span><span class="en">Japanese Language Studies and Cultural Immersion</span></strong> | <em><span class="es">Dic 2024 - Ene 2025</span><span class="en">Dec 2024 - Jan 2025</span></em></p>
-                <p class="es">Graduado en nivel intermedio-avanzado con promedio final de 90.</p>
-                <p class="en">Graduated at intermediate-advanced level with a final average of 90.</p>
-                <div class="galeria-academica">
-                    <img src="japon.jpg" alt="Tokyo" class="img-expandible">
+        <section id="laboral" class="seccion-completa">
+            <h2><span class="es">Experiencia Profesional</span><span class="en">Professional Experience</span></h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-content">
+                        <h3>Drone Pilot & Data Management</h3>
+                        <p class="institucion">Municipality of Guadalupe | 2023 - 2024</p>
+                        <p class="es desc">Manejo de equipo de alto valor y gestión de datos fotográficos/video para documentación de obras públicas. Demostró alta responsabilidad técnica y cumplimiento estricto de plazos de entrega.</p>
+                        <p class="en desc">Gathered photographic and video evidence for archival documentation and tracking of construction progress. Demonstrated high responsibility in handling expensive hardware, data management, and meeting strict delivery deadlines.</p>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div id="laboral" class="seccion-completa seccion-oculta">
-            <h2><span class="es">Experiencia Laboral</span><span class="en">Work Experience</span></h2>
-            
-            <div class="job-item">
-                <h3><span class="es">Piloto de Dron en Obras Públicas - Municipio de Guadalupe</span><span class="en">Drone Pilot for Public Works - Municipality of Guadalupe</span></h3>
-                <p><em>2023 - 2024</em></p>
-                <p class="es">Recabación de evidencias fotográficas y de video para la documentación archivística y seguimiento de avances de obra. Demostró alta responsabilidad en el manejo de hardware costoso, control de datos y cumplimiento de tiempos de entrega.</p>
-                <p class="en">Gathered photographic and video evidence for archival documentation and tracking of construction progress. Demonstrated high responsibility in handling expensive hardware, data control, and meeting delivery deadlines.</p>
-                <div class="video-container">
-                    <iframe width="560" height="315" src="https://www.youtube.com/embed/HP_7OBI2qJ4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <section id="intereses" class="seccion-completa">
+            <h2><span class="es">Intereses y Habilidades Blandas</span><span class="en">Interests & Soft Skills</span></h2>
+            <div class="skills-grid">
+                <div class="skill-box">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <h3><span class="es">Disciplina y Deporte</span><span class="en">Discipline & Sports</span></h3>
+                        <span style="font-size: 1.5rem;">🥋</span>
+                    </div>
+                    <p class="es" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 8px;"><strong>Taekwondo (Cinta Negra 3er Dan):</strong> 14 años de práctica ininterrumpida que han forjado constancia, resiliencia y enfoque a largo plazo.</p>
+                    <p class="en" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 8px;"><strong>Taekwondo (3rd Dan Black Belt):</strong> 14 years of training that have forged consistency, resilience, and long-term focus.</p>
+                    <p class="es" style="color: var(--text-muted); font-size: 0.95rem;"><strong>Fútbol:</strong> Complementa mis habilidades de comunicación y trabajo en equipo.</p>
+                    <p class="en" style="color: var(--text-muted); font-size: 0.95rem;"><strong>Soccer:</strong> Complements my communication and teamwork skills.</p>
+                </div>
+                <div class="skill-box">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <h3><span class="es">Hardware y Cultura</span><span class="en">Hardware & Culture</span></h3>
+                        <span style="font-size: 1.5rem;">⌨️</span>
+                    </div>
+                    <p class="es" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 8px;"><strong>Hardware:</strong> Entusiasta enfocado en el diseño y armado de teclados mecánicos <em>custom</em>.</p>
+                    <p class="en" style="color: var(--text-muted); font-size: 0.95rem; margin-bottom: 8px;"><strong>Hardware:</strong> Enthusiast dedicated to researching, designing and building custom mechanical keyboards.</p>
+                    <p class="es" style="color: var(--text-muted); font-size: 0.95rem;"><strong>Idiomas:</strong> Apasionado por aprender nuevos idiomas, habilidad fortalecida en Japón.</p>
+                    <p class="en" style="color: var(--text-muted); font-size: 0.95rem;"><strong>Languages:</strong> Passionate about learning new languages, a skill strengthened in Japan.</p>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <div id="hobbies" class="seccion-completa seccion-oculta">
-            <h2><span class="es">Intereses y Hobbies</span><span class="en">Interests and Hobbies</span></h2>
-            
-            <div class="hobby-item">
-                <h3><span class="es">Deportes y Disciplina</span><span class="en">Sports and Discipline</span></h3>
-                <p class="es">Tengo 14 años entrenando <strong>Taekwondo (Cinta Negra 3er Dan)</strong>. Esta disciplina me ha forjado constancia, resiliencia y enfoque a largo plazo. También practico fútbol lo que impacta en mis habilidades de trabajo en equipo y comunicación.</p>
-                <p class="en">I have been training <strong>Taekwondo for 14 years (3rd Dan Black Belt)</strong>. This discipline has forged consistency, resilience, and long-term focus. I also play soccer, which impacts my teamwork and communication skills.</p>
-                <div class="galeria-academica">
-                    <img src="taekwondo.jpg" alt="Taekwondo" class="img-expandible">
-                    <img src="futbol.jpg" alt="Futbol" class="img-expandible">
-                </div>
-            </div>
+    </main>
 
-            <div class="hobby-item">
-                <h3><span class="es">Tecnología y Hardware</span><span class="en">Technology and Hardware</span></h3>
-                <p class="es">Soy un entusiasta del hardware; en mi tiempo libre disfruto investigando y diseñando teclados custom.</p>
-                <p class="en">I am a hardware enthusiast; in my free time, I enjoy researching and designing custom keyboards.</p>
-                <div class="galeria-academica">
-                    <img src="teclados.jpeg" alt="Teclados Custom" class="img-expandible"><img src="1.jpeg" alt="Teclados Custom" class="img-expandible">
-                </div>
-            </div>
-            
-            <div class="hobby-item">
-                <h3><span class="es">Idiomas</span><span class="en">Languages</span></h3>
-                <p class="es">Disfruto mucho aprendiendo nuevos idiomas y culturas, habilidad que fortalecí durante mi estancia en Japón.</p>
-                <p class="en">I greatly enjoy learning new languages and cultures, a skill I strengthened during my stay in Japan.</p>
-                <div class="galeria-academica">
-                    <img src="idiomas.jpeg" alt="Idiomas" class="img-expandible">
-                </div>
-            </div>
-        </div>
-
-    </div>
-
-    <!-- Modal para imágenes expandibles -->
-    <div id="modal-imagen" class="modal">
-        <span class="cerrar-modal">&times;</span>
-        <img class="modal-contenido" id="img-ampliada">
-    </div>
-
+    <!-- Script para los toggles (Idioma y Tema) y evitar que se recargue la página -->
     <script>
-        // Alerta de bienvenida (Solo 1 vez por sesión)
-        window.onload = function() {
-            if (!sessionStorage.getItem('bienvenido_visto')) {
-                const isEnglish = document.body.classList.contains('lang-en');
-                if (isEnglish) {
-                    alert("Welcome to my Resume!\n\nHere you will find information about my academic background, work experience, personal projects, and my interests.");
-                } else {
-                    alert("¡Bienvenido a mi Curriculum Vitae!\n\nAquí encontrarás información sobre mi formación académica, experiencia laboral, proyectos personales y mis intereses.");
-                }
-                sessionStorage.setItem('bienvenido_visto', 'true');
-            }
-        };
-
-        // Lógica de cambio de idioma
+        // Language Toggle Logic
         const langCheckbox = document.getElementById('lang-checkbox');
+        const body = document.body;
         
-        // Cargar preferencia de idioma si existe
         const savedLang = localStorage.getItem('cv-lang');
         if (savedLang === 'es') {
-            document.body.classList.remove('lang-en');
-            document.body.classList.add('lang-es');
             langCheckbox.checked = true;
-            document.documentElement.lang = "es";
-        } else {
-            // Por defecto es inglés como pidió el usuario
-            document.body.classList.remove('lang-es');
-            document.body.classList.add('lang-en');
-            langCheckbox.checked = false;
-            document.documentElement.lang = "en";
+            body.classList.remove('lang-en');
+            body.classList.add('lang-es');
         }
 
-        langCheckbox.addEventListener('change', function() {
-            if (this.checked) {
-                // Cambiar a Español
-                document.body.classList.replace('lang-en', 'lang-es');
-                document.documentElement.lang = "es";
+        langCheckbox.addEventListener('change', () => {
+            if (langCheckbox.checked) {
+                body.classList.remove('lang-en');
+                body.classList.add('lang-es');
                 localStorage.setItem('cv-lang', 'es');
             } else {
-                // Cambiar a Inglés
-                document.body.classList.replace('lang-es', 'lang-en');
-                document.documentElement.lang = "en";
+                body.classList.remove('lang-es');
+                body.classList.add('lang-en');
                 localStorage.setItem('cv-lang', 'en');
             }
         });
 
-        // Dinamismo: Intersection Observer para animar las secciones al hacer scroll
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach(entry => {
-                if (entry.isIntersecting) {
-                    entry.target.classList.add('visible');
-                }
-            });
-        }, { threshold: 0.1 });
-
-        document.querySelectorAll('.seccion-oculta').forEach((el) => {
-            observer.observe(el);
-        });
-
-        // Lógica para expandir imágenes (Modal)
-        const modal = document.getElementById("modal-imagen");
-        const imgModal = document.getElementById("img-ampliada");
-        const imagenes = document.querySelectorAll(".img-expandible");
-        const spanCerrar = document.getElementsByClassName("cerrar-modal")[0];
-
-        imagenes.forEach(img => {
-            img.onclick = function(){
-                modal.style.display = "flex";
-                imgModal.src = this.src;
-            }
-        });
-
-        spanCerrar.onclick = function() {
-            modal.style.display = "none";
+        // Theme Toggle Logic (Modo Oscuro)
+        const themeCheckbox = document.getElementById('theme-checkbox');
+        
+        const savedTheme = localStorage.getItem('cv-theme');
+        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+            themeCheckbox.checked = true;
+            body.setAttribute('data-theme', 'dark');
         }
 
-        modal.onclick = function(e) {
-            if (e.target !== imgModal) {
-                modal.style.display = "none";
+        themeCheckbox.addEventListener('change', () => {
+            if (themeCheckbox.checked) {
+                body.setAttribute('data-theme', 'dark');
+                localStorage.setItem('cv-theme', 'dark');
+            } else {
+                body.removeAttribute('data-theme');
+                localStorage.setItem('cv-theme', 'light');
             }
-        }
+        });
     </script>
 </body>
 </html>
